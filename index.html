@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupu AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#1a1a2e] text-white">
+
+    <div class="container mx-auto p-4 flex flex-col min-h-screen">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-6">
+            <h1 class="text-3xl font-bold text-white flex items-center">
+                <span class="text-[#6a1b9a] text-4xl mr-2 glowing-text">R</span>upu AI
+            </h1>
+            <div class="flex items-center">
+                <span id="lang-text" class="mr-2 text-sm text-[#b0b0d0]">English</span>
+                <label for="language-toggle" class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" value="" id="language-toggle" class="sr-only peer">
+                    <div class="w-11 h-6 bg-gray-600 rounded-full peer peer-focus:ring-2 peer-focus:ring-[#6a1b9a] peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#6a1b9a]"></div>
+                </label>
+            </div>
+            <button class="text-2xl text-[#b0b0d0] focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </header>
+
+        <!-- Chat History -->
+        <div id="chat-history" class="glowing-card p-4 flex-grow mb-4 chat-container">
+            <p class="text-center text-[#b0b0d0] mt-auto">नमस्ते! मैं Rupu AI हूँ। मैं आपकी क्या मदद कर सकता हूँ?</p>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area glowing-card p-2">
+            <input type="text" id="chat-input" placeholder="अपना संदेश लिखें..." />
+            <button id="mic-btn" class="glowing-btn">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <button id="send-btn" class="glowing-btn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
