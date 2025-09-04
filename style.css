@@ -1,0 +1,103 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.glowing-card {
+    background-color: #2a2a4a;
+    border: 1px solid #4a4a6b;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(106, 27, 154, 0.7), inset 0 0 10px rgba(106, 27, 154, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+}
+.glowing-card:hover {
+    box-shadow: 0 0 25px rgba(106, 27, 154, 1), inset 0 0 15px rgba(106, 27, 154, 0.8);
+}
+.chat-container {
+    height: calc(100vh - 200px); /* Adjust height for mobile */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+}
+.message-bubble {
+    max-width: 80%;
+    padding: 0.75rem;
+    border-radius: 1rem;
+    word-wrap: break-word;
+    animation: fadeIn 0.5s ease-in-out;
+}
+.user-message {
+    background-color: #6a1b9a;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 0.25rem;
+}
+.ai-message {
+    background-color: #3f3f5f;
+    color: #e0e0e0;
+    align-self: flex-start;
+    border-bottom-left-radius: 0.25rem;
+}
+.input-area {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.input-area input {
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid #4a4a6b;
+    background-color: #2a2a4a;
+    color: #e0e0e0;
+    outline: none;
+    box-shadow: 0 0 5px rgba(106, 27, 154, 0.5);
+}
+.input-area input:focus {
+    box-shadow: 0 0 10px rgba(106, 27, 154, 0.8), inset 0 0 5px rgba(106, 27, 154, 0.5);
+}
+.glowing-btn {
+    background-color: #6a1b9a;
+    color: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(106, 27, 154, 0.7);
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+.glowing-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(106, 27, 154, 1);
+}
+.glowing-text {
+    text-shadow: 0 0 8px rgba(106, 27, 154, 0.9);
+}
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #6a1b9a;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.mic-active {
+    box-shadow: 0 0 25px rgba(255, 0, 0, 1), inset 0 0 15px rgba(255, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
